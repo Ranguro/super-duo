@@ -105,7 +105,7 @@ public class FootballScoreDetailWidgetRemoteViewsService extends RemoteViewsServ
                 views.setTextViewText(R.id.widget_detail_score, Utilies.getScores(homeTeamScore, awayTeamScore));
                 views.setTextViewText(R.id.widget_detail_match_time, matchTime);
                 views.setImageViewResource(R.id.widget_detail_home_crest, Utilies.getTeamCrestByTeamName(homeTeamName));
-                views.setImageViewResource(R.id.widget_detail_home_crest, Utilies.getTeamCrestByTeamName(awayTeamName));
+                views.setImageViewResource(R.id.widget_detail_away_crest, Utilies.getTeamCrestByTeamName(awayTeamName));
 
                 return views;
             }
