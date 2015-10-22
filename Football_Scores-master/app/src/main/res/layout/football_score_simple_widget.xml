@@ -19,7 +19,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:id="@+id/widget_home_crest"/>
+                    android:id="@+id/widget_home_crest"
+                    android:contentDescription="@string/home_team_crest"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -61,7 +62,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:id="@+id/widget_away_crest"/>
+                    android:id="@+id/widget_away_crest"
+                    android:contentDescription="@string/away_team_crest"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

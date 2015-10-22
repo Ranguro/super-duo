@@ -64,13 +64,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
-
             <ImageView
                 android:id="@+id/widget_detail_away_crest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center" />
-
+                android:layout_gravity="center"
+                android:contentDescription="@string/away_team_crest"/>
             <TextView
                 android:id="@+id/widget_detail_away_name"
                 android:layout_width="wrap_content"

@@ -20,6 +20,7 @@ import barqsoft.footballscores.Utilies;
 /**
  * RemoteViewsService controlling the data being shown in the scrollable Football scores detail widget
  */
+
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class FootballScoreDetailWidgetRemoteViewsService extends RemoteViewsService {
 
