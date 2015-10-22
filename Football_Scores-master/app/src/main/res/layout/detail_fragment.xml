@@ -37,8 +37,10 @@
             android:text="@string/share_text"
             android:id="@+id/share_button"
             android:drawable="@android:drawable/ic_menu_share"
-            android:paddingLeft="120dp"
-            android:paddingRight="120dp"
+            android:paddingLeft="@dimen/padding_match_detail_button"
+            android:paddingStart="@dimen/padding_match_detail_button"
+            android:paddingRight="@dimen/padding_match_detail_button"
+            android:paddingEnd="@dimen/padding_match_detail_button"
             android:contentDescription="@string/share_match"/>
     </FrameLayout>
 
