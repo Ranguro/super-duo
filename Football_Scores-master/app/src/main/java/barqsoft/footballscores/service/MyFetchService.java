@@ -80,7 +80,7 @@ public class MyFetchService extends IntentService
                 // Since it's JSON, adding a newline isn't necessary (it won't affect parsing)
                 // But it does make debugging a *lot* easier if you print out the completed
                 // buffer for debugging.
-                buffer.append(line + "\n");
+                buffer.append(line).append("\n");
             }
             if (buffer.length() == 0) {
                 // Stream was empty.  No point in parsing.
@@ -181,7 +181,7 @@ public class MyFetchService extends IntentService
 
 
             //ContentValues to be inserted
-            Vector<ContentValues> values = new Vector <ContentValues> (matches.length());
+            Vector<ContentValues> values = new Vector <> (matches.length());
             for(int i = 0;i < matches.length();i++)
             {
 
