@@ -17,6 +17,7 @@ public class ScannerActivity extends Activity implements ZXingScannerView.Result
 
     private static final String LOG_TAG = ScannerActivity.class.getSimpleName();
 
+
     private ZXingScannerView scannerView;
 
     @Override

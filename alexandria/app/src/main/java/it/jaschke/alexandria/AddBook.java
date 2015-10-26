@@ -85,7 +85,7 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
                     AddBook.this.restartLoader();
                 }
                 else{
-                    Toast.makeText(getActivity(), R.string.toast_no_internet_found_msg, Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(getActivity(), R.string.toast_no_internet_found_msg, Toast.LENGTH_LONG).show();;
                 }
             }
         });
