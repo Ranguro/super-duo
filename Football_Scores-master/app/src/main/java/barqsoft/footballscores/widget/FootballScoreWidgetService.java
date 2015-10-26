@@ -31,7 +31,6 @@ public class FootballScoreWidgetService extends IntentService {
     private static final int INDEX_HOME_GOALS = 6;
     private static final int INDEX_AWAY_GOALS = 7;
 
-
     public FootballScoreWidgetService() {
         super("FootballScoreWidgetService");
     }

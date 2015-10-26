@@ -5,18 +5,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/widget_margin">
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/widget"
         android:layout_width="match_parent"
         android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:orientation="horizontal"
         android:background="@color/green13">
         <ImageView
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@null"
-            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="start"
             android:src="@drawable/ic_launcher"/>
-    </FrameLayout>
+        <TextView
+            android:paddingTop="@dimen/listview_header_padding"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="@string/today_matches"
+            android:textColor="@android:color/black"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_launcher"/>
+    </LinearLayout>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -26,8 +42,15 @@
             android:id="@+id/widget_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:divider="@null"
             android:dividerHeight="0dp"
             tools:listitem="@layout/widget_match_detail_list_item"/>
+        <TextView
+            android:id="@+id/widget_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:text="@string/empty_match_list"/>
     </FrameLayout>
 </LinearLayout>

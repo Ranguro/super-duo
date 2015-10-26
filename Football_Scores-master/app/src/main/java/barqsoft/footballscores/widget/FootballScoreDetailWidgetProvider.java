@@ -22,6 +22,12 @@ public class FootballScoreDetailWidgetProvider extends AppWidgetProvider {
     public final String LOG_TAG = FootballScoreDetailWidgetProvider.class.getSimpleName();
 
     @Override
+    public void onReceive(Context context, Intent intent) {
+        int x = 0;
+        super.onReceive(context, intent);
+    }
+
+    @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         // Perform this loop procedure for each App Widget that belongs to this provider
         for (int appWidgetId : appWidgetIds) {
@@ -44,6 +50,7 @@ public class FootballScoreDetailWidgetProvider extends AppWidgetProvider {
                     .addNextIntentWithParentStack(clickIntentTemplate)
                     .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
             views.setPendingIntentTemplate(R.id.widget_list, clickPendingIntentTemplate);
+            views.setEmptyView(R.id.widget_list, R.id.widget_empty);
 
             // Tell the AppWidgetManager to perform an update on the current app widget
             appWidgetManager.updateAppWidget(appWidgetId, views);

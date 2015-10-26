@@ -37,4 +37,6 @@
     <string name="away_team_name">Away Team Name</string>
     <string name="home_team_crest">Home Team Crest</string>
     <string name="share_match">Share match</string>
+    <string name="today_matches">Today Matches</string>
+    <string name="empty_match_list">No football matches available.</string>
 </resources>

@@ -1,8 +1,10 @@
 package barqsoft.footballscores.widget;
 
 import android.annotation.TargetApi;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Binder;
 import android.os.Build;
 import android.widget.AdapterView;
@@ -26,6 +28,7 @@ public class FootballScoreDetailWidgetRemoteViewsService extends RemoteViewsServ
 
     public final String LOG_TAG = FootballScoreDetailWidgetRemoteViewsService.class.getSimpleName();
 
+    public static String MATCH_POSITION = "match_position";
 
 
     // these indices must match the projection
@@ -99,14 +102,26 @@ public class FootballScoreDetailWidgetRemoteViewsService extends RemoteViewsServ
                 String awayTeamName = data.getString(INDEX_AWAY);
                 int awayTeamScore = data.getInt(INDEX_AWAY_GOALS);
 
+                final Intent fillInIntent = new Intent();
 
                 // Add the data to the RemoteViews
-                views.setTextViewText(R.id.widget_detail_home_name,homeTeamName);
-                views.setTextViewText(R.id.widget_detail_away_name,awayTeamName);
+                views.setTextViewText(R.id.widget_detail_home_name, homeTeamName);
+                views.setTextViewText(R.id.widget_detail_away_name, awayTeamName);
                 views.setTextViewText(R.id.widget_detail_score, Utilies.getScores(homeTeamScore, awayTeamScore));
                 views.setTextViewText(R.id.widget_detail_match_time, matchTime);
                 views.setImageViewResource(R.id.widget_detail_home_crest, Utilies.getTeamCrestByTeamName(homeTeamName));
                 views.setImageViewResource(R.id.widget_detail_away_crest, Utilies.getTeamCrestByTeamName(awayTeamName));
+
+                Uri scoreUri = DatabaseContract.scores_table.buildScoreWithDate();
+                fillInIntent.setData(scoreUri);
+                views.setOnClickFillInIntent(R.id.widget_list_item, fillInIntent);
+
+
+                Intent intent = new Intent(getApplicationContext(), FootballScoreDetailWidgetProvider.class);
+                intent.putExtra(MATCH_POSITION,position);
+
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, 0);
+                views.setOnClickPendingIntent(R.id.widget_list_item, pendingIntent);
 
                 return views;
             }
