@@ -25,6 +25,7 @@
                     android:textIsSelectable="true"
                     android:textStyle="bold"
                     android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -86,22 +87,8 @@
                         android:id="@+id/authors"
                         android:layout_weight="1"
                         android:textStyle="bold"
-                        android:gravity="right|top"/>
+                        android:gravity="right|end"/>
                 </LinearLayout>
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/back_button"
-                    android:id="@+id/backButton"
-                    android:onClick="goBack"
-                    android:src="@drawable/ic_action_undo"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_gravity="right|top"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/fullBookTitle"
-                    android:layout_alignEnd="@+id/fullBookTitle"/>
-
 
             </RelativeLayout>
 
@@ -111,7 +98,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right">
+            android:layout_gravity="bottom|end">
 
             <Button
                 android:layout_width="wrap_content"
