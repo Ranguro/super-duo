@@ -88,6 +88,9 @@ public class FootballScoreWidgetService extends IntentService {
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, launchIntent, 0);
             views.setOnClickPendingIntent(R.id.scores_widget, pendingIntent);
 
+            Intent fillInIntent = new Intent(this, FootballScoreDetailWidgetProvider.class);
+            views.setOnClickFillInIntent(R.id.scores_widget,fillInIntent);
+
             // Tell the AppWidgetManager to perform an update on the current app widget
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }

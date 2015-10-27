@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import barqsoft.footballscores.service.MyFetchService;
+import barqsoft.footballscores.widget.FootballScoreDetailWidgetRemoteViewsService;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -21,6 +22,7 @@ import barqsoft.footballscores.service.MyFetchService;
 public class MainScreenFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>
 {
     public ScoresAdapter mAdapter;
+    private ListView listView;
     public static final int SCORES_LOADER = 0;
     private String[] fragmentdate = new String[1];
     private int last_selected_item = -1;
@@ -46,19 +48,25 @@ public class MainScreenFragment extends Fragment implements LoaderManager.Loader
         final ListView score_list = (ListView) rootView.findViewById(R.id.scores_list);
         mAdapter = new ScoresAdapter(getActivity(),null,0);
         score_list.setAdapter(mAdapter);
-        getLoaderManager().initLoader(SCORES_LOADER,null,this);
+        getLoaderManager().initLoader(SCORES_LOADER, null, this);
         mAdapter.detail_match_id = MainActivity.selected_match_id;
-        score_list.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        score_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ViewHolder selected = (ViewHolder) view.getTag();
                 mAdapter.detail_match_id = selected.match_id;
                 MainActivity.selected_match_id = (int) selected.match_id;
                 mAdapter.notifyDataSetChanged();
             }
         });
+
+
+        if (getActivity().getIntent().hasExtra(FootballScoreDetailWidgetRemoteViewsService.MATCH_INDEX)){
+            int selectedWidgetMatch = getActivity().getIntent().getExtras().
+                    getInt(FootballScoreDetailWidgetRemoteViewsService.MATCH_INDEX);
+            score_list.setSelection(selectedWidgetMatch);
+        }
+
         return rootView;
     }
 
