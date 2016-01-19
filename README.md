@@ -37,7 +37,7 @@ In this project, you will:
  * Alexandria has barcode scanning functionality./n
  * The two errors mentioned in the UX review are handled.
 
-##### Extras:
+#### Extras:
 * Alexandria’s barcode scanning functionality does not require the installation of a separate app on first use.
 * Strings are all included in the strings.xml file and untranslatable strings have a translatable tag marked to false.
 * Extra error cases were found
@@ -48,7 +48,7 @@ In this project, you will:
  * Football Scores can be displayed in a widget.
  * Football Scores app has content descriptions for all buttons, images, and text.
  * Football Scores app supports layout mirroring.
-##### Extras:
+#### Extras:
 * Football Scores also supports a Collection Widget.
 * Strings are all included in the strings.xml file and untranslatable strings have a translatable tag marked to false.
 * Extra error cases were found.
