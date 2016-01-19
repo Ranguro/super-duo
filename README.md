@@ -27,7 +27,6 @@ In this project, you will:
 * Read the UX Review in the next node.
 * Spend time exploring the current state of the apps, looking for ways they could be improved. Each app will need 2 or 3 improvements. Be sure to look specifically at issues called out in the UX Review.
 * Execute the improvements!
-* 
 
 ### Completed user stories: 
 
