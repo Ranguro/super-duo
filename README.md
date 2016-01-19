@@ -31,7 +31,9 @@ In this project, you will:
 ### Completed user stories: 
 
 
-#### Alexandria: A book list and barcode scanner app
+#### Alexandria:
+
+A book list and barcode scanner app
 
  * Alexandria has barcode scanning functionality./n
  * The two errors mentioned in the UX review are handled.
@@ -43,7 +45,9 @@ In this project, you will:
 * Extra error cases were found
  
 
-#### Football Scores: An app that tracks current and future football matches.
+#### Football Scores:
+
+An app that tracks current and future football matches.
 
 * Football Scores can be displayed in a widget.
 * Football Scores app has content descriptions for all buttons, images, and text.
