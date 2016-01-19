@@ -54,9 +54,18 @@ An app that tracks current and future football matches.
 * Football Scores app supports layout mirroring.
 
 ##### Extras:
+
 * Football Scores also supports a Collection Widget.
 * Strings are all included in the strings.xml file and untranslatable strings have a translatable tag marked to false.
 * Extra error cases were found.
+
+
+#### Libraries used: 
+
+*  [Zebra Crossing] (https://github.com/zxing/zxing) (Alexandria barcode scanner)
+
+
+
 
 
 
